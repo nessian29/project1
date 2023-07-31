@@ -1,7 +1,7 @@
 import random
 import string
 
-chars = string.punctuation + string.digits + string.ascii_letters
+chars = " " + string.punctuation + string.digits + string.ascii_letters
 chars = list(chars)
 key = chars.copy()
 
@@ -9,3 +9,13 @@ random.shuffle(key)
 
 print(f"chars: {chars}")
 print(f"key: {key}")
+
+enter_text = input("Enter message to encrypt: ")
+encryp_txt = ""
+
+for letter in enter_text:
+    index = chars.index(letter)
+    encryp_txt += key[index]
+
+print(f"Original message: {enter_text}")
+print(f"Encrypted message: {encryp_txt}")

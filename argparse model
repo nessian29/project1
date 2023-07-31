@@ -1,0 +1,6 @@
+from argparse 
+
+parser = ArgumentParser()
+
+parser.add_argument('echo' , help='Echos the given string')
+
