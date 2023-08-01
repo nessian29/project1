@@ -1,0 +1,7 @@
+import bcrypt
+
+password = b"SecretPassword87"
+
+hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+
+print(hashed)
